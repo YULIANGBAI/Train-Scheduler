@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Jumbotron div -->
+    <div class="banner">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">Anytime is Train Time!</h1>
+                <p class="lead">Choo Choo! Chee Chee!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Train info display div -->
+    <h1 class="heading">Current Train Schedule</h1>
+    <div class="train-info">
+        <table class="table" id="train-table">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Rows for train info will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Train input form div -->
+    <h1 class="heading">Add Train</h1>
+    <div class="train-input">
+        <form>
+            <div class="form-group">
+                <label>Train Name</label>
+                <input type="text" class="form-control" id="name-input">
+            </div>
+            <div class="form-group">
+                <label>Destination</label>
+                <input type="text" class="form-control" id="destination-input">
+            </div>
+            <div class="form-group">
+                <label>First Train (HH:mm - Military Time)</label>
+                <input type="text" class="form-control" id="firstTrain-input">
+            </div>
+            <div class="form-group">
+                <label>Frequency (min)</label>
+                <input type="number" class="form-control" id="frequency-input">
+            </div>
+            <br>
+            <button id="add-train-btn">Submit</button>
+        </form>
+    </div>
+    
+    <script src = "assets/javascript/logic1.js"></script>
+    <script src = "assets/javascript/moment1.js"></script>
+</body>
+
+</html>
